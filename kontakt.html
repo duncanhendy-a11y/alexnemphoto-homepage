@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt — Alex Nemecz, Firemní fotograf Brno</title>
+  <meta name="description" content="Napište mi — odpovím do jednoho pracovního dne. Konference, launche, employer branding v Brně.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://alexnemphoto.cz/kontakt">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kontakt — Alex Nemecz, Firemní fotograf Brno">
+  <meta property="og:description" content="Napište mi — odpovím do jednoho pracovního dne. Konference, launche, employer branding v Brně.">
+  <meta property="og:url" content="https://alexnemphoto.cz/kontakt">
+  <meta property="og:locale" content="cs_CZ">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body data-page="kontakt">
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="logo">ALEX NEMECZ</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="main-nav">
+      <a href="/portfolio">Portfolio</a>
+      <a href="/sluzby">Služby</a>
+      <a href="/idea-statica">IDEA StatiCa</a>
+      <a href="/cenik">Ceník</a>
+      <a href="/o-mne">O mně</a>
+      <a href="/kontakt">Kontakt</a>
+      <a href="/kontakt" class="btn btn-primary nav-cta">Napište mi →</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="contact-page">
+    <div class="container">
+      <div class="contact-grid">
+
+        <div class="contact-intro">
+          <h1>Kontakt</h1>
+          <p>Připravujete konferenci, launch nebo potřebujete domluvit spolupráci? Napište mi. Odpovím do jednoho pracovního dne.</p>
+          <div class="contact-info">
+            <!-- TODO: Add Alex's email and phone -->
+            <p>Email: [bude doplněno]</p>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap">
+          <!-- TODO: Replace REPLACE_WITH_FORMSPREE_ID with your Formspree form ID -->
+          <form class="contact-form" method="post" action="https://formspree.io/f/REPLACE_WITH_FORMSPREE_ID">
+
+            <div class="form-field">
+              <label for="name">Jméno<span class="required">*</span></label>
+              <input type="text" id="name" name="name" required autocomplete="name">
+            </div>
+
+            <div class="form-field">
+              <label for="company">Firma</label>
+              <input type="text" id="company" name="company" autocomplete="organization">
+            </div>
+
+            <div class="form-field">
+              <label for="email">E-mail<span class="required">*</span></label>
+              <input type="email" id="email" name="email" required autocomplete="email">
+            </div>
+
+            <div class="form-field">
+              <label for="phone">Telefon</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel">
+            </div>
+
+            <div class="form-field">
+              <label for="project-type">Typ projektu</label>
+              <select id="project-type" name="project_type">
+                <option value="">Vyberte typ projektu</option>
+                <option value="konference">Konference nebo event</option>
+                <option value="launch">Produktový launch</option>
+                <option name="employer-branding">Employer branding</option>
+                <option value="portraty">Portréty</option>
+                <option value="jine">Jiné</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="message">Zpráva<span class="required">*</span></label>
+              <textarea id="message" name="message" required placeholder="Popište váš projekt — termín, místo, rozsah, co potřebujete."></textarea>
+            </div>
+
+            <!-- Honeypot field — hidden from real users -->
+            <input type="text" name="_gotcha" style="display:none">
+            <input type="hidden" name="_next" value="https://alexnemphoto.cz/kontakt">
+
+            <div class="form-submit">
+              <button type="submit" class="btn btn-primary">Odeslat zprávu</button>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">ALEX NEMECZ</div>
+      <p>Firemní fotograf pro tech a software firmy v Brně.</p>
+    </div>
+    <nav class="footer-nav">
+      <a href="/portfolio">Portfolio</a>
+      <a href="/sluzby">Služby</a>
+      <a href="/idea-statica">IDEA StatiCa</a>
+      <a href="/cenik">Ceník</a>
+      <a href="/o-mne">O mně</a>
+      <a href="/kontakt">Kontakt</a>
+    </nav>
+    <div class="footer-copy">
+      <p>© 2026 Alexandr Nemecz. Všechna práva vyhrazena.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+const toggle = document.querySelector('.nav-toggle');
+const nav = document.getElementById('main-nav');
+toggle.addEventListener('click', function() {
+  const open = nav.classList.toggle('nav--open');
+  toggle.setAttribute('aria-expanded', open);
+});
+</script>
+
+</body>
+</html>
