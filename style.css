@@ -89,7 +89,7 @@ p {
   line-height: 1.75;
 }
 
-em { font-style: italic; }
+em { font-style: italic; font-family: var(--ff-serif); }
 strong { font-weight: 500; color: var(--white); }
 
 .section-label {
