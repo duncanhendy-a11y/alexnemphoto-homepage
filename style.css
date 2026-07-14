@@ -175,7 +175,13 @@ body[data-page="kontakt"] .nav a[href="/kontakt"] {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: var(--surface-2);
+  overflow: hidden;
+}
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
 }
 .hero-overlay {
   position: absolute;
@@ -350,12 +356,31 @@ body[data-page="kontakt"] .nav a[href="/kontakt"] {
 .ratio-16-9 { padding-top: 56.25%; }
 
 /* Portfolio tile */
-.portfolio-tile .img-placeholder { padding-top: 75%; }
+.portfolio-tile {
+  display: flex;
+  flex-direction: column;
+}
+.portfolio-tile img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius);
+  display: block;
+}
 .tile-label {
   margin-top: 0.5rem;
   font-size: 0.8125rem;
   color: var(--text-muted);
   letter-spacing: 0.03em;
+}
+
+/* Case study images */
+.case-study-img img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--radius);
+  display: block;
 }
 
 /* WHY GRID */
