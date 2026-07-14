@@ -14,6 +14,7 @@
   <meta property="og:url" content="https://alexnemphoto.cz/">
   <meta property="og:locale" content="cs_CZ">
   <meta property="og:site_name" content="Alex Nemecz — Firemní fotografie">
+  <meta property="og:image" content="https://alexnemphoto.cz/images/hero.jpg">
 
   <script type="application/ld+json">
   {
@@ -31,15 +32,15 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
-<header class="site-header">
+<header class="site-header" id="site-header">
   <div class="container header-inner">
     <a href="/" class="logo">ALEX NEMECZ</a>
-    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" id="nav-toggle">
       <span></span><span></span><span></span>
     </button>
     <nav class="nav" id="main-nav">
@@ -74,11 +75,35 @@
     </div>
   </section>
 
+  <!-- STATS STRIP -->
+  <div class="stats-strip">
+    <div class="container">
+      <div class="stats-inner">
+        <div class="stat-item" data-animate>
+          <span class="stat-number">18</span>
+          <span class="stat-label" style="text-transform:none;letter-spacing:0.06em">měsíců s IDEA&nbsp;StatiCa</span>
+        </div>
+        <div class="stat-item" data-animate data-delay="1">
+          <span class="stat-number">150</span>
+          <span class="stat-label">zemí světa</span>
+        </div>
+        <div class="stat-item" data-animate data-delay="2">
+          <span class="stat-number">48h</span>
+          <span class="stat-label">dodání editovaných assetů</span>
+        </div>
+        <div class="stat-item" data-animate data-delay="3">
+          <span class="stat-number">50 km</span>
+          <span class="stat-label">od Brna bezplatně</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- PROBLEM STRIP -->
   <div class="problem-strip">
     <div class="container problem-cols">
-      <p class="problem-bold">Brněnské tech firmy stavějí světové produkty. Pak vypadají na webu jako amatéři.</p>
-      <div class="problem-body">
+      <p class="problem-bold" data-animate>Brněnské tech firmy stavějí světové produkty. Pak vypadají na webu jako amatéři.</p>
+      <div class="problem-body" data-animate data-delay="1">
         <p>Slabé fotky na týmové stránce, LinkedIn screenshoty místo profesionálních portrétů, eventy bez dokumentace. Zatímco produkt překonává konkurenci, vizuální prezentace firmy zaostává.</p>
         <p class="problem-coda">Já to měním.</p>
       </div>
@@ -88,7 +113,7 @@
   <!-- SERVICES -->
   <section class="services-section">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header" data-animate>
         <div>
           <span class="section-label">Co fotografuji</span>
           <h2>Oblasti práce</h2>
@@ -96,25 +121,25 @@
         <a href="/sluzby" class="section-link">Zobrazit všechny služby →</a>
       </div>
       <div class="services-grid">
-        <div class="service-card">
+        <div class="service-card" data-animate>
           <p class="service-num">01</p>
           <h3>Konference a eventy</h3>
-          <p>Keynotes, panely, networking — vše zdokumentované, editované do 48 hodin.</p>
+          <p>Keynotes, panely, networking — vše zdokumentované, editované do 48 hodin. Přijdu připraven, shot list dohodnutý předem.</p>
         </div>
-        <div class="service-card">
+        <div class="service-card" data-animate data-delay="1">
           <p class="service-num">02</p>
           <h3>Produktové launche a kampaně</h3>
-          <p>Vizuály pro release, landing pages a social kampaně, které odpovídají mezinárodním standardům.</p>
+          <p>Vizuály pro release, landing pages a social kampaně. Vím, že fotky jdou rovnou do sales decku — fotografuji s tím vědomím.</p>
         </div>
-        <div class="service-card">
+        <div class="service-card" data-animate data-delay="2">
           <p class="service-num">03</p>
           <h3>Employer branding</h3>
-          <p>Autentické záběry týmu a pracovního prostředí pro recruitingové materiály a kariérní stránky.</p>
+          <p>Autentické záběry týmu a pracovního prostředí pro recruitingové materiály a kariérní stránky. Bez přetvářky.</p>
         </div>
-        <div class="service-card">
+        <div class="service-card" data-animate data-delay="3">
           <p class="service-num">04</p>
-          <h3>Marketingové podklady</h3>
-          <p>Portréty, white papers, sales decky — konzultativní přístup, ne jen stisk spouště.</p>
+          <h3>Portréty a marketingové podklady</h3>
+          <p>Headshoty, thought leadership, sales decky — konzultativní přístup, ne jen stisk spouště. Dodání do 48 hodin.</p>
         </div>
       </div>
     </div>
@@ -124,13 +149,14 @@
   <section class="case-study-block">
     <div class="container">
       <div class="case-study-inner">
-        <div class="case-study-text">
+        <div class="case-study-text" data-animate>
           <span class="section-label case-study-eyebrow">Případová studie</span>
           <h2>18 měsíců s IDEA StatiCa</h2>
-          <p>IDEA StatiCa je brněnská softwarová firma, která prodává svůj produkt v 150 zemích světa. Jako jejich stálý fotograf dokumentuji partnerské summity, konference, produktové eventy a mezinárodní kampaně — vždy konzultativně, vždy s pochopením toho, co marketingový tým skutečně potřebuje. Výsledek? Vizuály, které obstojí v Londýně, Berlíně i San Franciscu.</p>
+          <p>IDEA StatiCa je brněnská softwarová firma, která prodává svůj produkt v 150 zemích světa. Jako jejich stálý fotograf jsem dokumentoval partnerské summity, konference, produktové eventy a mezinárodní kampaně — vždy konzultativně, vždy s pochopením toho, co jejich marketingový tým skutečně potřebuje.</p>
+          <p>Výsledek? Vizuály, které obstojí v Londýně, Berlíně i San Franciscu.</p>
           <a href="/idea-statica" class="btn btn-ghost">Přečíst případovou studii →</a>
         </div>
-        <div class="case-study-images">
+        <div class="case-study-images" data-animate data-delay="2">
           <div class="case-study-img">
             <img src="/images/idea-01.jpg" alt="IDEA StatiCa Partner Summit 2025 — skupinová fotografie v slavnostním sálu" loading="lazy">
           </div>
@@ -145,35 +171,35 @@
   <!-- PORTFOLIO PREVIEW -->
   <section class="portfolio-section">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header" data-animate>
         <h2>Portfolio</h2>
         <a href="/portfolio" class="section-link">Zobrazit celé portfolio →</a>
       </div>
       <div class="portfolio-grid">
-        <div class="portfolio-tile">
+        <a href="/portfolio" class="portfolio-tile" data-animate>
           <img src="/images/konference-01.jpg" alt="IDEA StatiCa Partner Summit 2025 — skupinová fotografie" loading="lazy">
           <span class="tile-label">Konference</span>
-        </div>
-        <div class="portfolio-tile">
+        </a>
+        <a href="/portfolio" class="portfolio-tile" data-animate data-delay="1">
           <img src="/images/launch-01.jpg" alt="Přednášející na pódiu s prezentací" loading="lazy">
           <span class="tile-label">Produktový launch</span>
-        </div>
-        <div class="portfolio-tile">
+        </a>
+        <a href="/portfolio" class="portfolio-tile" data-animate data-delay="2">
           <img src="/images/employer-01.jpg" alt="Týmová schůzka v kancelářském prostředí" loading="lazy">
           <span class="tile-label">Employer branding</span>
-        </div>
-        <div class="portfolio-tile">
+        </a>
+        <a href="/portfolio" class="portfolio-tile" data-animate data-delay="1">
           <img src="/images/portret-01.jpg" alt="Přednášející u stolu s laptopem" loading="lazy">
           <span class="tile-label">Portréty</span>
-        </div>
-        <div class="portfolio-tile">
+        </a>
+        <a href="/portfolio" class="portfolio-tile" data-animate data-delay="2">
           <img src="/images/konference-02.jpg" alt="Panelová diskuze na konferenci Summit 2026" loading="lazy">
           <span class="tile-label">Konference</span>
-        </div>
-        <div class="portfolio-tile">
-          <img src="/images/launch-02.jpg" alt="Networkingová večeře s přípitek" loading="lazy">
-          <span class="tile-label">Produktový launch</span>
-        </div>
+        </a>
+        <a href="/portfolio" class="portfolio-tile" data-animate data-delay="3">
+          <img src="/images/launch-02.jpg" alt="Networkingová večeře s přípitkem" loading="lazy">
+          <span class="tile-label">Event</span>
+        </a>
       </div>
     </div>
   </section>
@@ -181,19 +207,22 @@
   <!-- WHY -->
   <section class="why-section">
     <div class="container">
-      <h2>Proč já</h2>
+      <h2 data-animate>Proč já</h2>
       <div class="why-grid">
-        <div class="why-card">
+        <div class="why-card" data-animate>
+          <span class="why-card-num">01</span>
           <h3>Rozumím vašemu světu</h3>
-          <p>Produktové launche, developer konference, sales enablement — nepotřebuji vysvětlovat co je SaaS nebo B2B kampaň.</p>
+          <p>Produktové launche, developer konference, sales enablement — nepotřebuji vysvětlovat co je SaaS nebo B2B kampaň. Mluvíme stejným jazykem od prvního briefu.</p>
         </div>
-        <div class="why-card">
+        <div class="why-card" data-animate data-delay="1">
+          <span class="why-card-num">02</span>
           <h3>Doručím do 48 hodin</h3>
-          <p>Editované assety do dvou pracovních dnů od focení. Váš content calendar nečeká.</p>
+          <p>Editované assety do dvou pracovních dnů od focení. Váš content calendar nečeká — a 48 hodin není příslib, je to standard.</p>
         </div>
-        <div class="why-card">
+        <div class="why-card" data-animate data-delay="2">
+          <span class="why-card-num">03</span>
           <h3>Konzultativní přístup</h3>
-          <p>Nepřijdu jen s fotoaparátem. Přijdu s doporučeními — co by mělo být na shot listu a proč.</p>
+          <p>Nepřijdu jen s fotoaparátem. Přijdu s doporučeními — co by mělo být na shot listu a proč. Vy řídíte obsah, já přijdu připraven.</p>
         </div>
       </div>
     </div>
@@ -202,9 +231,9 @@
   <!-- CTA -->
   <section class="cta-section">
     <div class="container">
-      <h2>Připravujete konferenci nebo launch?</h2>
-      <p>Napište mi — odpovím do jednoho pracovního dne.</p>
-      <a href="/kontakt" class="btn btn-primary">Napsat →</a>
+      <h2 data-animate>Připravujete konferenci nebo launch?</h2>
+      <p data-animate data-delay="1">Napište mi — odpovím do jednoho pracovního dne.</p>
+      <a href="/kontakt" class="btn btn-primary" data-animate data-delay="2">Napište mi →</a>
     </div>
   </section>
 
@@ -231,12 +260,37 @@
 </footer>
 
 <script>
-const toggle = document.querySelector('.nav-toggle');
+// Mobile navigation
+const toggle = document.getElementById('nav-toggle');
 const nav = document.getElementById('main-nav');
 toggle.addEventListener('click', function() {
   const open = nav.classList.toggle('nav--open');
+  toggle.classList.toggle('is-active', open);
   toggle.setAttribute('aria-expanded', open);
 });
+
+// Header: show border on scroll
+const header = document.getElementById('site-header');
+window.addEventListener('scroll', function() {
+  header.classList.toggle('header--scrolled', window.scrollY > 40);
+}, { passive: true });
+
+// Scroll reveal
+const animateEls = document.querySelectorAll('[data-animate]');
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  animateEls.forEach(function(el) { observer.observe(el); });
+} else {
+  // Fallback: show all immediately
+  animateEls.forEach(function(el) { el.classList.add('is-visible'); });
+}
 </script>
 
 </body>
